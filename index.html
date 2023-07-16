@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Heat Map</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <h1 id="title">Monthly Global Land-Surface Temperature</h1>
+    <h2 id="description">1753 - 2015: Base Temperature 8.66℃</h2>
+    <svg id="root"></svg>
+    <svg id="legend">
+        <g>
+            <rect x="500" y="0" width="20" height="20" fill="#4575b4"></rect>
+            <text x="530" y="15" fill="black">lower than -2.5</text>
+        </g>
+        <g>
+            <rect x="500" y="30" width="20" height="20" fill="#abd9e9"></rect>
+            <text x="530" y="45" fill="black">lower than -0.5</text>
+        </g>
+        <g>
+            <rect x="500" y="60" width="20" height="20" fill="#ffffbf"></rect>
+            <text x="530" y="75" fill="black">lower than 0.5</text>
+        </g>
+        <g>
+            <rect x="500" y="90" width="20" height="20" fill="#fdae61"></rect>
+            <text x="530" y="105" fill="black">lower than 2.5</text>
+        </g>
+        <g>
+            <rect x="500" y="120" width="20" height="20" fill="#d73027"></rect>
+            <text x="530" y="135" fill="black">higher than 2.5</text>
+        </g>
+    </svg>
+    <text id="tooltip"></text>
+</body>
+<script src="./index.js"></script>
+</html>
